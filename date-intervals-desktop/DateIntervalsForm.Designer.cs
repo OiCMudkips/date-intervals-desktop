@@ -36,6 +36,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lblStartDate = new System.Windows.Forms.Label();
             this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.radioButtonAfter = new System.Windows.Forms.RadioButton();
+            this.radioButtonBefore = new System.Windows.Forms.RadioButton();
             this.groupBoxOptions.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numPickerIntervalLength)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numPickerDates)).BeginInit();
@@ -44,6 +46,8 @@
             // groupBoxOptions
             // 
             this.groupBoxOptions.AutoSize = true;
+            this.groupBoxOptions.Controls.Add(this.radioButtonBefore);
+            this.groupBoxOptions.Controls.Add(this.radioButtonAfter);
             this.groupBoxOptions.Controls.Add(this.btnGenerate);
             this.groupBoxOptions.Controls.Add(this.numPickerIntervalLength);
             this.groupBoxOptions.Controls.Add(this.numPickerDates);
@@ -54,14 +58,15 @@
             this.groupBoxOptions.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBoxOptions.Location = new System.Drawing.Point(0, 0);
             this.groupBoxOptions.Name = "groupBoxOptions";
-            this.groupBoxOptions.Size = new System.Drawing.Size(364, 161);
+            this.groupBoxOptions.Size = new System.Drawing.Size(364, 194);
             this.groupBoxOptions.TabIndex = 0;
             this.groupBoxOptions.TabStop = false;
             this.groupBoxOptions.Text = "Options";
             // 
             // btnGenerate
             // 
-            this.btnGenerate.Location = new System.Drawing.Point(140, 126);
+            this.btnGenerate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnGenerate.Location = new System.Drawing.Point(141, 159);
             this.btnGenerate.Name = "btnGenerate";
             this.btnGenerate.Size = new System.Drawing.Size(75, 23);
             this.btnGenerate.TabIndex = 6;
@@ -146,11 +151,34 @@
             this.dateTimePicker.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker.TabIndex = 0;
             // 
+            // radioButtonAfter
+            // 
+            this.radioButtonAfter.AutoSize = true;
+            this.radioButtonAfter.Location = new System.Drawing.Point(15, 125);
+            this.radioButtonAfter.Name = "radioButtonAfter";
+            this.radioButtonAfter.Size = new System.Drawing.Size(118, 17);
+            this.radioButtonAfter.TabIndex = 7;
+            this.radioButtonAfter.TabStop = true;
+            this.radioButtonAfter.Text = "After Selected Date";
+            this.radioButtonAfter.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonBefore
+            // 
+            this.radioButtonBefore.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.radioButtonBefore.AutoSize = true;
+            this.radioButtonBefore.Location = new System.Drawing.Point(225, 125);
+            this.radioButtonBefore.Name = "radioButtonBefore";
+            this.radioButtonBefore.Size = new System.Drawing.Size(127, 17);
+            this.radioButtonBefore.TabIndex = 8;
+            this.radioButtonBefore.TabStop = true;
+            this.radioButtonBefore.Text = "Before Selected Date";
+            this.radioButtonBefore.UseVisualStyleBackColor = true;
+            // 
             // DateIntervalsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(364, 161);
+            this.ClientSize = new System.Drawing.Size(364, 194);
             this.Controls.Add(this.groupBoxOptions);
             this.Name = "DateIntervalsForm";
             this.Text = "Date Intervals";
@@ -173,6 +201,8 @@
         private System.Windows.Forms.NumericUpDown numPickerDates;
         private System.Windows.Forms.NumericUpDown numPickerIntervalLength;
         private System.Windows.Forms.Button btnGenerate;
+        private System.Windows.Forms.RadioButton radioButtonAfter;
+        private System.Windows.Forms.RadioButton radioButtonBefore;
     }
 }
 

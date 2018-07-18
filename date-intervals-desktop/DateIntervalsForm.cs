@@ -12,6 +12,8 @@ namespace date_intervals_desktop
 {
     public partial class DateIntervalsForm : Form
     {
+        protected enum TypeOfDateInterval { Before, After };
+
         public DateIntervalsForm()
         {
             InitializeComponent();
@@ -19,7 +21,10 @@ namespace date_intervals_desktop
 
         private void btnGenerate_Click(object sender, EventArgs e)
         {
-            var listOfDates = MakeListOfDates(dateTimePicker.Value, (int)numPickerDates.Value, (int)numPickerIntervalLength.Value);
+            // negative interval length means the list should go backwards
+            var intervalLength = radioButtonBefore.Checked ? numPickerIntervalLength.Value * -1 : numPickerIntervalLength.Value;
+
+            var listOfDates = MakeListOfDates(dateTimePicker.Value, (int)numPickerDates.Value, (int)intervalLength);
             DatesForm datesForm = new DatesForm(listOfDates);
             datesForm.Show();
         }
@@ -41,11 +46,6 @@ namespace date_intervals_desktop
             if (numDates < 1)
             {
                 throw new ArgumentOutOfRangeException("numDates");
-            }
-
-            if (daysBetweenDates < 1)
-            {
-                throw new ArgumentOutOfRangeException("daysBetweenDates");
             }
 
             var listOfDates = new List<DateTime>(numDates);
