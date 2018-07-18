@@ -76,7 +76,7 @@
       <DependentUpon>DatesForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs">
-      <ExcludeFromStyleCop>False</ExcludeFromStyleCop>
+      <ExcludeFromStyleCop>True</ExcludeFromStyleCop>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="DateIntervalsForm.resx">
