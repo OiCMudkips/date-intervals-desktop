@@ -17,6 +17,8 @@ namespace date_intervals_desktop
         public DateIntervalsForm()
         {
             InitializeComponent();
+
+            UpdateSingleDateResult();
         }
 
         private void btnGenerate_Click(object sender, EventArgs e)
@@ -56,6 +58,47 @@ namespace date_intervals_desktop
             }
 
             return listOfDates;
+        }
+
+        protected void UpdateSingleDateResult()
+        {
+            labelSingleDateResult.Text = GenerateSingleDateResult();
+        }
+
+        /// <summary>
+        /// Generates the text that should be displayed in the single date menu using values from the input controls.
+        /// </summary>
+        /// <returns></returns>
+        protected string GenerateSingleDateResult()
+        {
+            if (!radioButtonSingleDateAfter.Checked && !radioButtonSingleDateBefore.Checked)
+            {
+                return String.Empty;
+            }
+
+            var intervalLength = radioButtonSingleDateBefore.Checked ? numericUpDownSingleDateIntervalLength.Value * -1 : numericUpDownSingleDateIntervalLength.Value;
+            var dateToDisplay = dateTimePickerSingleDate.Value.AddDays((int)intervalLength);
+            return String.Format("Result: {0}", dateToDisplay.ToShortDateString());
+        }
+
+        private void dateTimePickerSingleDate_ValueChanged(object sender, EventArgs e)
+        {
+            UpdateSingleDateResult();
+        }
+
+        private void numericUpDownSingleDateIntervalLength_ValueChanged(object sender, EventArgs e)
+        {
+            UpdateSingleDateResult();
+        }
+
+        private void radioButtonSingleDateBefore_CheckedChanged(object sender, EventArgs e)
+        {
+            UpdateSingleDateResult();
+        }
+
+        private void radioButtonSingleDateAfter_CheckedChanged(object sender, EventArgs e)
+        {
+            UpdateSingleDateResult();
         }
     }
 }
