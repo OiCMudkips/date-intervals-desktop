@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DateIntervalsForm));
             this.groupBoxOptions = new System.Windows.Forms.GroupBox();
             this.radioButtonBefore = new System.Windows.Forms.RadioButton();
             this.radioButtonAfter = new System.Windows.Forms.RadioButton();
@@ -333,6 +334,7 @@
             this.ClientSize = new System.Drawing.Size(356, 204);
             this.Controls.Add(this.tabControlMain);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "DateIntervalsForm";
             this.Text = "Date Intervals";
