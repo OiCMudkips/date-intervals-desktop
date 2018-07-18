@@ -34,18 +34,20 @@
             this.btnGenerate = new System.Windows.Forms.Button();
             this.numPickerIntervalLength = new System.Windows.Forms.NumericUpDown();
             this.numPickerDates = new System.Windows.Forms.NumericUpDown();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.lblStartDate = new System.Windows.Forms.Label();
+            this.labelMultipleDatesIntervalLength = new System.Windows.Forms.Label();
+            this.labelNumDates = new System.Windows.Forms.Label();
+            this.lblStartDateMultipleDates = new System.Windows.Forms.Label();
             this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.tabControlMain = new System.Windows.Forms.TabControl();
             this.tabPageMultDates = new System.Windows.Forms.TabPage();
             this.tabPageSingleDate = new System.Windows.Forms.TabPage();
+            this.groupBoxSingleDate = new System.Windows.Forms.GroupBox();
             this.groupBoxOptions.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numPickerIntervalLength)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numPickerDates)).BeginInit();
             this.tabControlMain.SuspendLayout();
             this.tabPageMultDates.SuspendLayout();
+            this.tabPageSingleDate.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBoxOptions
@@ -55,9 +57,9 @@
             this.groupBoxOptions.Controls.Add(this.btnGenerate);
             this.groupBoxOptions.Controls.Add(this.numPickerIntervalLength);
             this.groupBoxOptions.Controls.Add(this.numPickerDates);
-            this.groupBoxOptions.Controls.Add(this.label2);
-            this.groupBoxOptions.Controls.Add(this.label1);
-            this.groupBoxOptions.Controls.Add(this.lblStartDate);
+            this.groupBoxOptions.Controls.Add(this.labelMultipleDatesIntervalLength);
+            this.groupBoxOptions.Controls.Add(this.labelNumDates);
+            this.groupBoxOptions.Controls.Add(this.lblStartDateMultipleDates);
             this.groupBoxOptions.Controls.Add(this.dateTimePicker);
             this.groupBoxOptions.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBoxOptions.Location = new System.Drawing.Point(3, 3);
@@ -142,32 +144,32 @@
             0,
             0});
             // 
-            // label2
+            // labelMultipleDatesIntervalLength
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 90);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(111, 13);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Interval Length (Days)";
+            this.labelMultipleDatesIntervalLength.AutoSize = true;
+            this.labelMultipleDatesIntervalLength.Location = new System.Drawing.Point(12, 90);
+            this.labelMultipleDatesIntervalLength.Name = "labelMultipleDatesIntervalLength";
+            this.labelMultipleDatesIntervalLength.Size = new System.Drawing.Size(111, 13);
+            this.labelMultipleDatesIntervalLength.TabIndex = 3;
+            this.labelMultipleDatesIntervalLength.Text = "Interval Length (Days)";
             // 
-            // label1
+            // labelNumDates
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 58);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(87, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Number of Dates";
+            this.labelNumDates.AutoSize = true;
+            this.labelNumDates.Location = new System.Drawing.Point(12, 58);
+            this.labelNumDates.Name = "labelNumDates";
+            this.labelNumDates.Size = new System.Drawing.Size(87, 13);
+            this.labelNumDates.TabIndex = 2;
+            this.labelNumDates.Text = "Number of Dates";
             // 
-            // lblStartDate
+            // lblStartDateMultipleDates
             // 
-            this.lblStartDate.AutoSize = true;
-            this.lblStartDate.Location = new System.Drawing.Point(12, 25);
-            this.lblStartDate.Name = "lblStartDate";
-            this.lblStartDate.Size = new System.Drawing.Size(55, 13);
-            this.lblStartDate.TabIndex = 1;
-            this.lblStartDate.Text = "Start Date";
+            this.lblStartDateMultipleDates.AutoSize = true;
+            this.lblStartDateMultipleDates.Location = new System.Drawing.Point(12, 25);
+            this.lblStartDateMultipleDates.Name = "lblStartDateMultipleDates";
+            this.lblStartDateMultipleDates.Size = new System.Drawing.Size(55, 13);
+            this.lblStartDateMultipleDates.TabIndex = 1;
+            this.lblStartDateMultipleDates.Text = "Start Date";
             // 
             // dateTimePicker
             // 
@@ -203,12 +205,23 @@
             // tabPageSingleDate
             // 
             this.tabPageSingleDate.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPageSingleDate.Controls.Add(this.groupBoxSingleDate);
             this.tabPageSingleDate.Location = new System.Drawing.Point(4, 22);
             this.tabPageSingleDate.Name = "tabPageSingleDate";
             this.tabPageSingleDate.Padding = new System.Windows.Forms.Padding(3);
             this.tabPageSingleDate.Size = new System.Drawing.Size(348, 186);
             this.tabPageSingleDate.TabIndex = 1;
             this.tabPageSingleDate.Text = "Single Date";
+            // 
+            // groupBoxSingleDate
+            // 
+            this.groupBoxSingleDate.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBoxSingleDate.Location = new System.Drawing.Point(3, 3);
+            this.groupBoxSingleDate.Name = "groupBoxSingleDate";
+            this.groupBoxSingleDate.Size = new System.Drawing.Size(342, 180);
+            this.groupBoxSingleDate.TabIndex = 0;
+            this.groupBoxSingleDate.TabStop = false;
+            this.groupBoxSingleDate.Text = "Options";
             // 
             // DateIntervalsForm
             // 
@@ -226,6 +239,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numPickerDates)).EndInit();
             this.tabControlMain.ResumeLayout(false);
             this.tabPageMultDates.ResumeLayout(false);
+            this.tabPageSingleDate.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -234,9 +248,9 @@
 
         private System.Windows.Forms.GroupBox groupBoxOptions;
         private System.Windows.Forms.DateTimePicker dateTimePicker;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label lblStartDate;
+        private System.Windows.Forms.Label labelMultipleDatesIntervalLength;
+        private System.Windows.Forms.Label labelNumDates;
+        private System.Windows.Forms.Label lblStartDateMultipleDates;
         private System.Windows.Forms.NumericUpDown numPickerDates;
         private System.Windows.Forms.NumericUpDown numPickerIntervalLength;
         private System.Windows.Forms.Button btnGenerate;
@@ -245,6 +259,7 @@
         private System.Windows.Forms.TabControl tabControlMain;
         private System.Windows.Forms.TabPage tabPageMultDates;
         private System.Windows.Forms.TabPage tabPageSingleDate;
+        private System.Windows.Forms.GroupBox groupBoxSingleDate;
     }
 }
 
