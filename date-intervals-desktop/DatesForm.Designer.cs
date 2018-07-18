@@ -33,6 +33,7 @@
             // 
             // listBoxDates
             // 
+            this.listBoxDates.FormatString = "d";
             this.listBoxDates.FormattingEnabled = true;
             this.listBoxDates.Location = new System.Drawing.Point(12, 12);
             this.listBoxDates.Name = "listBoxDates";

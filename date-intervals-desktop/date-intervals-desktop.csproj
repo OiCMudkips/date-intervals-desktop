@@ -51,10 +51,19 @@
     <Compile Include="DateIntervalsForm.Designer.cs">
       <DependentUpon>DateIntervalsForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="DatesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DatesForm.Designer.cs">
+      <DependentUpon>DatesForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="DateIntervalsForm.resx">
       <DependentUpon>DateIntervalsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DatesForm.resx">
+      <DependentUpon>DatesForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -12,9 +12,16 @@ namespace date_intervals_desktop
 {
     public partial class DatesForm : Form
     {
-        public DatesForm()
+        /// <summary>
+        /// Creates a form which displays the input dates in a list box.
+        /// </summary>
+        /// <param name="datesToDisplay">The dates to display</param>
+        public DatesForm(IList<DateTime> datesToDisplay = null)
         {
             InitializeComponent();
+
+            datesToDisplay = datesToDisplay ?? new List<DateTime>();
+            listBoxDates.DataSource = datesToDisplay;
         }
     }
 }
