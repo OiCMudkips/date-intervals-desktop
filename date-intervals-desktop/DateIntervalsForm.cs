@@ -16,5 +16,10 @@ namespace date_intervals_desktop
         {
             InitializeComponent();
         }
+
+        private void btnGenerate_Click(object sender, EventArgs e)
+        {
+            // TODO: Open Interval Window
+        }
     }
 }
