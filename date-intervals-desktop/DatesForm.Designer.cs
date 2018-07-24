@@ -38,6 +38,7 @@
             this.listBoxDates.FormattingEnabled = true;
             this.listBoxDates.Location = new System.Drawing.Point(12, 12);
             this.listBoxDates.Name = "listBoxDates";
+            this.listBoxDates.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
             this.listBoxDates.Size = new System.Drawing.Size(279, 199);
             this.listBoxDates.TabIndex = 0;
             // 
