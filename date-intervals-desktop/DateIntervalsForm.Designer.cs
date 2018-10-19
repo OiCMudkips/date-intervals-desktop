@@ -118,7 +118,7 @@
             this.numPickerIntervalLength.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.numPickerIntervalLength.Location = new System.Drawing.Point(210, 85);
             this.numPickerIntervalLength.Maximum = new decimal(new int[] {
-            500,
+            100000,
             0,
             0,
             0});
@@ -280,7 +280,7 @@
             this.numericUpDownSingleDateIntervalLength.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.numericUpDownSingleDateIntervalLength.Location = new System.Drawing.Point(210, 52);
             this.numericUpDownSingleDateIntervalLength.Maximum = new decimal(new int[] {
-            500,
+            100000,
             0,
             0,
             0});
